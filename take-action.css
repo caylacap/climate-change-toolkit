@@ -1,0 +1,210 @@
+/******************************************************/
+/************** CSS FOR TAKE-ACTION.HTML **************/
+/******************************************************/
+body, html {
+  background-color: white;
+  color: #00008bff;
+}
+
+.page-header-action {
+  width: 100%;
+  position: absolute;
+  text-transform: uppercase;
+  background-color: #00008bff;
+}
+
+/*nav bar css*/
+#nav-home {
+  border-style: none solid none solid;
+  border-color: white;
+}
+
+#nav-resources {
+  border-style: none solid none none;
+  border-color: white;
+}
+
+/******************************************************/
+/***************** ACTION ITEM LIST *******************/
+/******************************************************/
+
+/* FLEXBOX CONTAINER */
+.flex-container-action {
+  display: flex;
+
+  position: absolute;
+  padding: 0.5em 0;
+  align-items: center;
+
+  left: 5%;
+  right: 5%;
+
+  margin: 5% 0;
+  width: 90%;
+
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: start;
+}
+
+/* LEFT BOX UNDER TITLE */
+.action-info-container {
+  width: 100%;
+  margin-right: 5%;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 5%;
+  padding: 0px;
+  font-size: 16px;
+  flex-grow: 2;
+  text-align: center;
+}
+
+.action-info-container img {
+  width: 100%;
+}
+
+/* RIGHT BOX UNDER TITLE */
+.action-list-container {
+  width: 75%;
+  padding: 35px;
+  margin: 0%;
+  flex-grow: 1;
+}
+
+/* CHECKLIST CONTAINER */
+#checklist {
+  background-color: white;
+  border-radius: 15px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  border-style: solid;
+  border-color: #00008bff;
+ 
+}
+
+/* HEADER IN CHECKLIST CONTAINER */
+#checklist-header {
+  text-align: center;
+  color: #00008bff;
+  letter-spacing: 1px;
+}
+
+/* INSTUCTIONS IN CHECKLIST CONTAINER */
+#instructions {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #00008bff;
+  font-size: 10pt;
+}
+
+/* CONTAINER FOR ACTION LIST */
+#my-list {
+  padding: 10px 0 0 0;
+  margin: 0;
+  font-size: 10pt;
+}
+
+/* STYLING FOR CONTAINER FOR ACTION LIST */
+#my-list li {
+  cursor: pointer;
+  padding-top: 8px;
+  padding-right: 20px;
+  padding-bottom: 8px;
+  padding-left: 35px;
+  position: relative;
+  list-style-type: none;
+  transition: 0.2s;
+  width: 85%;
+  color: black;
+}
+
+/* Styling for the check squares added at the beginning of each list item */
+#my-list li::before {
+  content: "";
+  position: absolute;
+  border-color: #43d6b9ff;
+  border-style: solid;
+  border-width: 2px;
+
+  top: 15px;
+  left: 13px;
+  height: 10px;
+  width: 10px;
+}
+
+/* BACKGROUND COLOR WHEN HOVERING */
+#my-list li:hover {
+  background: #f3f3f3;
+  color: #0D38D3;
+}
+
+/* SQUARE COLOR WHEN HOVERING */
+#my-list li:hover::before {
+  border-color: #0D38D3;
+  border-style: solid;
+}
+
+/* MARK COMPLETE AND STRIKETHROUGH */
+#my-list li.all-done {
+  text-decoration: line-through;
+}
+
+/* CHECKMARK TO COMPLETE */
+#my-list li.all-done::before {
+  content: "";
+  position: absolute;
+  border-color: #0D38D3;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 5px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/******************************************************/
+/** CHANGE TAKE-ACTION.HTML CSS BASED ON SCREEN SIZE **/
+/******************************************************/
+
+@media only screen and (max-width: 700px) {
+  .flex-container-action {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 701px) {
+  .flex-container-action {
+    flex-wrap: wrap;
+  }
+
+  .left-container {
+    width: 50%;
+    margin-right: 10%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .flex-container-action {
+    flex-wrap: nowrap;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .flex-container-action {
+    flex-wrap: nowrap;
+  }
+
+  #list-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px 20px 40px 40px;
+  }
+
+  .left-container {
+    width: 50%;
+    margin-right: 10%;
+  }
+}

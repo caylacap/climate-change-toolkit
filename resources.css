@@ -1,0 +1,108 @@
+/* CSS FOR RESOURCES.HTML */
+/* ELEMENTS CSS */
+body, html {
+  background-color: white;
+  color: #00008bff;
+}
+
+li {
+  font-size: 15px;
+}
+
+.page-header-resources {
+  background-color: #00008bff;
+  padding: 0.05em;
+}
+
+.resources-header {
+  text-align: left;
+}
+
+/* NAV BAR CSS */
+#nav-home {
+  border-style: none solid none solid;
+  border-color: white;
+}
+
+#nav-resources {
+  border-style: none solid none none;
+  border-color: white;
+}
+
+/* FLEXBOX */
+.resources-container {
+  display: flex;
+
+  position: absolute;
+  padding: 0.5em;
+  align-items: top;
+
+  margin: 0.5em;
+  width: 95%;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+/* STYLING FOR EACH RESOURCE BOX */
+#resources-learn {
+  padding: 0.5em;
+  border-style: solid;
+  border-color: #00008bff;
+  order: 1;
+  width: 45%;
+  margin: 0.2em;
+  height: 50%;
+}
+#resources-watch {
+  padding: 0.5em;
+  border-style: solid;
+  border-color: #00008bff;
+  order: 3;
+  width: 45%;
+  margin: 0.2em;
+}
+#resources-donate {
+  padding: 0.5em;
+  border-style: solid;
+  border-color: #00008bff;
+  order: 2; 
+  width: 45%;
+  margin: 0.2em;
+  height: auto;
+}
+#resources-voice {
+  padding: 0.5em;
+  border-style: solid;
+  border-color: #00008bff;
+  order: 4;
+  width: 45%;
+  margin: 0.2em;
+}
+/* STYLING FOR ITEMS ON RESOURCE LIST */
+#resources-learn a {
+  color: #00008bff;
+}
+#resources-watch a {
+  color: #00008bff;
+}
+#resources-donate a {
+  color: #00008bff;
+}
+#resources-voice a {
+  color: #00008bff
+}
+#resources-learn li a:hover {
+  color: green;
+}
+#resources-donate li a:hover {
+  color: green;
+}
+#resources-voice li a:hover {
+  color: green;
+}
+/* MEDIA QUERY */
+@media only screen and (max-width: 768px) {
+  flex-direction: column;
+}
